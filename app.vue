@@ -80,6 +80,18 @@ onMounted(() => {
   initTooltips();
 });
 </script>
+    <script>
+        // Handle postMessage from the parent page
+        window.addEventListener('message', function (event) {
+            if (event.origin === 'https://its-aomi.github.io') {
+                // Handle the data received from the parent page
+                if (event.data === 'PermissionGranted') {
+                    // Perform actions that require permission
+                    console.log('Permission granted. Now you can access serial port.');
+                }
+            }
+        });
+    </script>
 
 <style>
   body {

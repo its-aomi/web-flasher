@@ -31,15 +31,15 @@ export default defineNuxtConfig({
       proxy: {
         "^/api/.*": {
           target:
-            "https://its-aomi.github.io/meshtastic-api/",
+            "https://api.meshtastic.org/",
           changeOrigin: true,
           followRedirects: true,
           rewrite: (path) => path.replace(/^\/api/, ""),
           secure: false,
           headers: {
             Accept: "application/octet-stream",
-            Origin: '/',
-            Referer: '/'
+            Origin: 'https://flash.meshtastic.org',
+            Referer: 'https://flash.meshtastic.org/'
           },
         }
       }
