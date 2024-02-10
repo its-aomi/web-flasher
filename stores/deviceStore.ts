@@ -10,7 +10,7 @@ import {
 import { type DeviceHardware } from '../types/api';
 import { createUrl } from './store';
 
-const firmwareApi = mande(createUrl('api/resource/deviceHardware'))
+const firmwareApi = mande(createUrl('https://api.meshtastic.org/resource/deviceHardwar'))
 
 export const useDeviceStore = defineStore('device', {
     state: () => {

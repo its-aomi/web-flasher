@@ -31,7 +31,7 @@ export default defineNuxtConfig({
       proxy: {
         "^/api/.*": {
           target:
-            "https://api.meshtastic.org/",
+            "https://api.meshtastic.org",
           changeOrigin: true,
           followRedirects: true,
           rewrite: (path) => path.replace(/^\/api/, ""),

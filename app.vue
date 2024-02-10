@@ -13,8 +13,9 @@
         <div class="flex flex-col content-center justify-center">
           <div class="flex flex-wrap sm:flex-row flex-col py-2 mb-2">
             <div class="mx-auto">
+              <img src="@/assets/img/logo.svg" class="h-32 w-32" alt="Meshtastic Logo" />
               <h1 class="text-white mb-4 text-4xl font-extrabold">
-                Testing Flasher App
+                Flasher
               </h1>
             </div>
           </div>
@@ -53,6 +54,15 @@
         </div>
       </div>
     </section>
+      <footer class="footer bg-2C2D3C text-white mt-4 py-4">
+      <div class="container mx-auto px-5 py-4 text-center">
+        <p>
+          Powered by
+          <a href="https://vercel.com/?utm_source=meshtastic&utm_campaign=oss">▲ Vercel</a>
+          | Meshtastic® is a registered trademark of Meshtastic LLC. |
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -79,19 +89,8 @@ onMounted(() => {
   initModals();
   initTooltips();
 });
+
 </script>
-    <script>
-        // Handle postMessage from the parent page
-        window.addEventListener('message', function (event) {
-            if (event.origin === 'https://its-aomi.github.io') {
-                // Handle the data received from the parent page
-                if (event.data === 'PermissionGranted') {
-                    // Perform actions that require permission
-                    console.log('Permission granted. Now you can access serial port.');
-                }
-            }
-        });
-    </script>
 
 <style>
   body {
@@ -119,4 +118,7 @@ onMounted(() => {
     padding: 10px;
     text-align: center;
   }
+  button#dropdownFirmwareButton {
+    display: none;
+}
 </style>
